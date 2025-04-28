@@ -51,6 +51,7 @@
     (asserts! (is-none (map-get? profiles profile-key)) ERR_PROFILE_ALREADY_EXISTS)
     (asserts! (and (> (len name) u0) (<= (len name) u50)) ERR_INVALID_INPUT)
     (asserts! (and (> (len bio) u0) (<= (len bio) u300)) ERR_INVALID_INPUT)
+    (asserts! (and (> (len contact) u0) (<= (len contact) u100)) ERR_INVALID_INPUT)
     
     ;; Create new profile
     (map-set profiles profile-key
@@ -77,6 +78,7 @@
   )
     (asserts! (and (> (len name) u0) (<= (len name) u50)) ERR_INVALID_INPUT)
     (asserts! (and (> (len bio) u0) (<= (len bio) u300)) ERR_INVALID_INPUT)
+    (asserts! (and (> (len contact) u0) (<= (len contact) u100)) ERR_INVALID_INPUT)
     
     ;; Update profile
     (map-set profiles profile-key
